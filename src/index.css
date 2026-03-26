@@ -1,0 +1,66 @@
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600&family=Bebas+Neue&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-bg text-text font-font min-h-screen text-[14px] leading-relaxed;
+  }
+}
+
+@layer components {
+  /* Forms */
+  .fg {
+    @apply flex flex-col gap-1.5;
+  }
+  .fl {
+    @apply text-xs text-text2 font-medium;
+  }
+  .fi {
+    @apply bg-surface border border-border rounded-md py-2 px-3 text-text font-font text-sm outline-none transition-colors w-full focus:border-amber-d placeholder:text-text3;
+  }
+  .fs {
+    @apply bg-surface border border-border rounded-md py-2 px-3 text-text font-font text-sm outline-none cursor-pointer w-full focus:border-amber-d;
+  }
+  .fs option {
+    @apply bg-card;
+  }
+
+  /* Buttons */
+  .btn {
+    @apply py-2 px-5 rounded-md border-none cursor-pointer font-font text-[13px] font-medium transition-all;
+  }
+  .btn-p {
+    @apply bg-amber text-[#0d1410] hover:bg-amber-l;
+  }
+  .btn-o {
+    @apply bg-transparent border border-border2 text-text2 hover:border-amber-d hover:text-amber;
+  }
+  .btn-sm {
+    @apply py-1 px-3 text-xs;
+  }
+  .bico {
+    @apply w-7 h-7 rounded-md border border-border bg-transparent cursor-pointer text-text2 flex items-center justify-center transition-all p-0 text-sm hover:border-border2 hover:text-text;
+  }
+
+  /* Cards */
+  .card {
+    @apply bg-card border border-border rounded-[10px] p-5 mb-4;
+  }
+  .card-title {
+    @apply font-mono text-[10px] uppercase tracking-[2px] text-text3 mb-4 pb-2.5 border-b border-border;
+  }
+
+  /* Badge */
+  .badge {
+    @apply text-[10px] uppercase tracking-[1px] py-0.5 px-2 rounded font-semibold;
+  }
+  .badge-s {
+    @apply bg-[#1e3018] text-[#5aaa5a] border border-[#2e4a28];
+  }
+  .badge-l {
+    @apply bg-[#152030] text-[#4888cc] border border-[#253850];
+  }
+}
